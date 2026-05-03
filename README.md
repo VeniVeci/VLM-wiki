@@ -1,59 +1,59 @@
 # VLM Wiki
 
-基于 Karpathy LLM Wiki 思想的全模态个人记忆库。
+A full-modal personal knowledge base built on the Karpathy LLM Wiki concept.
 
-## 核心理念
+## Core Philosophy
 
-- **多模态摄入**: 支持图片、视频、音频、文本的全方位记录
-- **VLM + LLM**: 用视觉语言模型理解图像视频，用语言模型整理知识
-- **Obsidian 展示**: 所有内容以 Markdown 格式存储，直接用 Obsidian 浏览
-- **持续积累**: Wiki 是一个持久的、不断复合的个人知识库
+- **Multi-modal Intake**: Support comprehensive recording of images, videos, audio, and text
+- **VLM + LLM**: Use Vision Language Models to understand images/videos, and Language Models to organize knowledge
+- **Obsidian Display**: All content stored as Markdown, browseable directly in Obsidian
+- **Continuous Compounding**: The wiki is a persistent, ever-compounding personal knowledge base
 
-## 项目结构
+## Project Structure
 
 ```
 .
-├── raw/                    # 原始素材（只读）
-│   ├── images/            # 照片、截图
-│   ├── videos/            # 视频 + 字幕
-│   ├── audio/             # 语音备忘
-│   ├── text/              # 文本文档
-│   └── diary/             # 日记
+├── raw/                    # Raw materials (read-only)
+│   ├── images/            # Photos, screenshots
+│   ├── videos/            # Videos + transcripts
+│   ├── audio/             # Voice memos
+│   ├── text/              # Text documents
+│   └── diary/             # Daily diary
 │
-├── wiki/                   # 编译后的知识文章
-│   ├── index.md           # 总索引
-│   ├── log.md             # 操作日志
-│   ├── moments/           # 人生时刻
-│   ├── people/            # 人物
-│   ├── places/            # 地点
-│   ├── projects/          # 项目
-│   ├── concepts/          # 概念
-│   ├── patterns/          # 模式发现
-│   └── archives/          # 归档
+├── wiki/                   # Compiled knowledge articles
+│   ├── index.md           # Global index
+│   ├── log.md             # Operation log
+│   ├── moments/           # Life moments
+│   ├── people/            # People
+│   ├── places/            # Places
+│   ├── projects/          # Projects
+│   ├── concepts/          # Concepts
+│   ├── patterns/          # Discovered patterns
+│   └── archives/          # Archives
 │
-├── .vlmwiki/              # 配置
-│   └── config.json        # 模型配置
+├── .vlmwiki/              # Configuration
+│   └── config.json        # Model configuration
 │
-├── references/            # 模板
+├── references/            # Templates
 │   ├── raw-template.md
 │   ├── article-template.md
 │   ├── archive-template.md
 │   └── index-template.md
 │
-├── scripts/               # 分析脚本
-│   ├── video_extractor.py # 视频抽帧
-│   ├── image_analyzer.py  # 图片元数据分析
-│   ├── qwen_vlm_analyzer.py # Qwen多模态分析
-│   └── run_analysis_now.py # 立即分析脚本
+├── scripts/               # Analysis scripts
+│   ├── video_extractor.py # Video frame extraction
+│   ├── image_analyzer.py  # Image metadata analysis
+│   ├── qwen_vlm_analyzer.py # Qwen multimodal analysis
+│   └── run_analysis_now.py # Run analysis immediately
 │
-└── AGENTS.md              # Agent 操作规范（中文版为 AGENTS.zh.md）
+└── AGENTS.md              # Agent specifications (Chinese: AGENTS.zh.md)
 ```
 
-## 快速开始
+## Quick Start
 
-### 1. 配置模型
+### 1. Configure Model
 
-编辑 `.vlmwiki/config.json`，选择你的模型 provider：
+Edit `.vlmwiki/config.json` to choose your model provider:
 
 ```json
 {
@@ -65,77 +65,77 @@
 }
 ```
 
-支持本地模型 (Ollama) 或云端 API (OpenAI, Gemini, Claude)。
+Supports local models (Ollama) or cloud APIs (OpenAI, Gemini, Claude).
 
-### 2. 添加素材
+### 2. Add Materials
 
-**图片**
+**Images**
 ```
-将照片放入 raw/images/YYYY-MM/
-然后描述："帮我分析这张照片，更新 wiki"
-```
-
-**视频**
-```
-将视频放入 raw/videos/YYYY-MM/
-VLM 会提取关键帧、转录音频、生成描述
+Put photos in raw/images/YYYY-MM/
+Then say: "analyze this image and update wiki"
 ```
 
-**音频**
+**Videos**
 ```
-将录音放入 raw/audio/YYYY-MM/
-自动转录并提取关键信息
-```
-
-**日记/文本**
-```
-直接写入 raw/diary/ 或 raw/text/
+Put videos in raw/videos/YYYY-MM/
+VLM will extract keyframes, transcribe audio, generate descriptions
 ```
 
-### 3. 知识整理
+**Audio**
+```
+Put recordings in raw/audio/YYYY-MM/
+Automatically transcribe and extract key information
+```
 
-Agent 会自动：
+**Diary/Text**
+```
+Write directly to raw/diary/ or raw/text/
+```
 
-1. **分析素材**: 用 VLM 理解图片/视频内容
-2. **提取信息**: 人物、时间、地点、活动、情绪
-3. **更新 Wiki**: 在对应分类下创建/更新文章
-4. **发现模式**: 识别重复模式（习惯、人际、地点）
+### 3. Knowledge Organization
 
-### 4. Obsidian 浏览
+The Agent automatically:
 
-直接用 Obsidian 打开项目文件夹，所有内容都是标准 Markdown。
+1. **Analyze Materials**: Use VLM to understand image/video content
+2. **Extract Information**: People, time, location, activities, emotions
+3. **Update Wiki**: Create/update articles in appropriate categories
+4. **Discover Patterns**: Identify recurring patterns (habits, relationships, places)
 
-## Wiki 分类说明
+### 4. Browse with Obsidian
 
-| 分类 | 用途 | 示例 |
-|------|------|------|
-| moments | 人生重要时刻 | 旅行、聚会、里程碑 |
-| people | 人物 | 家人、朋友、同事 |
-| places | 地点 | 去过的城市、常去的地方 |
-| projects | 项目 | 工作项目、学习项目 |
-| concepts | 概念 | 学到的新知识、想法 |
-| patterns | 模式发现 | 习惯、情绪周期、时间分配 |
-| archives | 归档 | 综合分析、回忆录 |
+Open the project folder directly with Obsidian - all content is standard Markdown.
 
-## 触发指令
+## Wiki Categories
 
-- `add image [path]` - 添加图片到 wiki
-- `add video [path]` - 添加视频到 wiki
-- `add audio [path]` - 添加音频到 wiki
-- `what do I know about [topic]` - 查询关于某主题的知识
-- `analyze my patterns` - 分析你的生活模式
-- `today in history` - 回忆每年今日
+| Category | Purpose | Examples |
+|----------|---------|----------|
+| moments | Life milestones | Travel, parties, milestones |
+| people | People in your life | Family, friends, colleagues |
+| places | Places you've been | Cities, frequent visits |
+| projects | Projects | Work projects, learning projects |
+| concepts | Concepts & ideas | New knowledge, thoughts |
+| patterns | Discovered patterns | Habits, mood cycles, time allocation |
+| archives | Archives | Comprehensive analysis, memoirs |
 
-## 与 Karpathy LLM Wiki 的区别
+## Trigger Commands
 
-| 特性 | LLM Wiki | VLM Wiki |
-|------|---------|----------|
-| 文本处理 | ✅ | ✅ |
-| 图片理解 | ❌ | ✅ |
-| 视频分析 | ❌ | ✅ |
-| 音频处理 | ❌ | ✅ |
-| 多模态关联 | ❌ | ✅ |
-| 生活模式发现 | 基础 | 深度 |
+- `add image [path]` - Add image to wiki
+- `add video [path]` - Add video to wiki
+- `add audio [path]` - Add audio to wiki
+- `what do I know about [topic]` - Query knowledge about a topic
+- `analyze my patterns` - Analyze your life patterns
+- `today in history` - Recall this day across years
+
+## Differences from Karpathy LLM Wiki
+
+| Feature | LLM Wiki | VLM Wiki |
+|---------|----------|----------|
+| Text processing | ✅ | ✅ |
+| Image understanding | ❌ | ✅ |
+| Video analysis | ❌ | ✅ |
+| Audio processing | ❌ | ✅ |
+| Multi-modal linking | ❌ | ✅ |
+| Life pattern discovery | Basic | Deep |
 
 ## License
 
