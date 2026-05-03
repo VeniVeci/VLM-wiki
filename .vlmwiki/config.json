@@ -1,0 +1,46 @@
+{
+  "vlm": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url": "",
+    "temperature": 0.7,
+    "max_tokens": 4096
+  },
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "api_key_env": "OPENAI_API_KEY",
+    "temperature": 0.7,
+    "max_tokens": 4096
+  },
+  "storage": {
+    "raw_base": "raw",
+    "wiki_base": "wiki",
+    "media_subdirs": {
+      "images": "images",
+      "videos": "videos",
+      "audio": "audio",
+      "text": "text",
+      "diary": "diary"
+    }
+  },
+  "obsidian": {
+    "vault_path": "",
+    "media_folder": "",
+    "auto_sync": false
+  },
+  "features": {
+    "auto_transcribe_video": true,
+    "auto_transcribe_audio": true,
+    "extract_exif": true,
+    "pattern_discovery": true,
+    "reminder_enabled": false,
+    "reminder_time": "09:00"
+  },
+  "supported_formats": {
+    "images": [".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp"],
+    "videos": [".mp4", ".mov", ".avi", ".mkv", ".webm"],
+    "audio": [".mp3", ".m4a", ".wav", ".ogg", ".flac", ".aac"]
+  }
+}

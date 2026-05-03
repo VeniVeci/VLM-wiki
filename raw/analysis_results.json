@@ -1,0 +1,128 @@
+{
+  "timestamp": "2026-05-03",
+  "images": [
+    {
+      "filename": "微信图片_20260503182120_190_41.jpg",
+      "path": "..\\raw\\images\\微信图片_20260503182120_190_41.jpg",
+      "size": [
+        1440,
+        1080
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 253606
+    },
+    {
+      "filename": "微信图片_20260503182122_192_41.jpg",
+      "path": "..\\raw\\images\\微信图片_20260503182122_192_41.jpg",
+      "size": [
+        1706,
+        1280
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 113053
+    },
+    {
+      "filename": "微信图片_20260503182123_193_41.jpg",
+      "path": "..\\raw\\images\\微信图片_20260503182123_193_41.jpg",
+      "size": [
+        1711,
+        1280
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 153278
+    },
+    {
+      "filename": "微信图片_20260503182124_194_41.jpg",
+      "path": "..\\raw\\images\\微信图片_20260503182124_194_41.jpg",
+      "size": [
+        1711,
+        1280
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 153445
+    },
+    {
+      "filename": "微信图片_20260503182125_195_41.jpg",
+      "path": "..\\raw\\images\\微信图片_20260503182125_195_41.jpg",
+      "size": [
+        960,
+        1284
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 93785
+    },
+    {
+      "filename": "微信图片_20260503182125_196_41.jpg",
+      "path": "..\\raw\\images\\微信图片_20260503182125_196_41.jpg",
+      "size": [
+        1706,
+        1280
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 169731
+    }
+  ],
+  "frames": [
+    {
+      "filename": "frame_0000.jpg",
+      "path": "..\\raw\\videos\\2023-05-frames\\frame_0000.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 214309
+    },
+    {
+      "filename": "frame_0037.jpg",
+      "path": "..\\raw\\videos\\2023-05-frames\\frame_0037.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 187162
+    },
+    {
+      "filename": "frame_0074.jpg",
+      "path": "..\\raw\\videos\\2023-05-frames\\frame_0074.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 173684
+    },
+    {
+      "filename": "frame_0111.jpg",
+      "path": "..\\raw\\videos\\2023-05-frames\\frame_0111.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 165452
+    },
+    {
+      "filename": "frame_0149.jpg",
+      "path": "..\\raw\\videos\\2023-05-frames\\frame_0149.jpg",
+      "size": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "filesize": 143873
+    }
+  ]
+}
