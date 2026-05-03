@@ -97,7 +97,12 @@ if __name__ == "__main__":
     # 默认图片
     default_image = r"D:\MyProject\VLM-wiki\VLM-wiki\raw\images\微信图片_20260503182120_190_41.jpg"
     
-    # 使用提供的 API Key
-    api_key = "sk-f1db80de1cc446e39c6dde6ac7f10437"
+    # 从环境变量获取 API Key
+    api_key = os.getenv("DASHSCOPE_API_KEY")
+    if not api_key:
+        print("[ERROR] 请设置 DASHSCOPE_API_KEY 环境变量")
+        print("  Windows: set DASHSCOPE_API_KEY=你的-api-key")
+        print("  Mac/Linux: export DASHSCOPE_API_KEY=你的-api-key")
+        sys.exit(1)
     
     analyze_single_image(default_image, api_key)
