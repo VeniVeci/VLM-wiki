@@ -33,3 +33,7 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Private docs (for internal discussion only)
+private_docs/
+docs/
